@@ -14,6 +14,7 @@ Este proyecto tiene la finalidad de subir ficheros en el Bucket de S3 de Amazon 
 **Índice**
 - [Pre-requisito](#Pre-requisitos)
 - [Montaje de Entorno](#Montaje-de-Entorno)
+- [Subir al EC2 de AWS](#Subir-al-ec2-de-aws)
 
 
 ## Pre-requisitos
@@ -54,3 +55,10 @@ Iniciar el servidor
 python manage.py runserver
 ```
 
+## Subir al EC2 de AWS
+
+La subida del proyecto al EC2 de AWS se debe realizar desde la maquina de Bastion, solo es copiar el fichero.
+
+```bash
+scp -r -i /home/ec2-user/ppk/keypair-ree-dev.ppm /home/ec2-user/api_rest_calculator/ ec2-user@10.192.20.121:/home/ec2-user
+```
