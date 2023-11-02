@@ -22,8 +22,8 @@ Este proyecto tiene la finalidad de subir ficheros en el Bucket de S3 de Amazon 
  - [Python](https://www.python.org/downloads/)
  - [Django](https://www.djangoproject.com/download/)
  - [Postman](https://www.postman.com/downloads/)
+ - [MobaXTerm](https://mobaxterm.mobatek.net/download.html)
 
- 
 
 
 ## Montaje de Entorno
