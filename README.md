@@ -45,6 +45,7 @@ Instalar dependencias
 ```bash
 pip install djangorestframework
 pip install psycopg2
+pip install boto3
 pip install markdown
 pip install django-filter
 ```
@@ -59,6 +60,20 @@ python manage.py runserver
 
 La subida del proyecto al EC2 de AWS se debe realizar desde la maquina de Bastion, solo es copiar el fichero.
 
+Copiar el fichero del proyecto al EC2
 ```bash
 scp -r -i /home/ec2-user/ppk/keypair-ree-dev.ppm /home/ec2-user/api_rest_calculator/ ec2-user@10.192.20.121:/home/ec2-user
+```
+Acceder al EC2 por terminal
+```bash
+sudo su -
+ssh -i /home/ec2-user/ppk/keypair-ree-dev.ppm ec2-user@10.192.20.121
+```
+
+Para iniciar el proyecto en EC2, tenemos que acceder al directorio del proyecto
+```bash
+#Acceder al directorio raiz del proyecto
+cd /api_rest_calculator
+#Desplegar el proyecto en EC2
+python3 manage.py runserver
 ```

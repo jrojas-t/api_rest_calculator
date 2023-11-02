@@ -17,7 +17,7 @@ def getAll(request):
                     connectionelementtypeid AS connection_element_type_id,
                     connectionelementtypename AS connection_element_type_name
                 FROM connectionelementview
-                ORDER BY regionName, areaName, connectionElementName LIMIT 5 """
+                ORDER BY regionName, areaName, connectionElementName LIMIT 1 """
 
     result = ConnectionElementView.objects.raw(query)
     serializer = ConnectionElementViewSerializer(result, many=True)

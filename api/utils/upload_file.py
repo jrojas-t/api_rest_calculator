@@ -5,10 +5,16 @@ from botocore.exceptions import ClientError
 import os
 
 session = boto3.Session(profile_name='aesydes')
+#session = boto3.Session()
+credentials = session.get_credentials()
+
 s3_client = session.client('s3')
 s3 = session.resource('s3')
 
 def upload_file(jsonObject):
+    print(credentials.access_key)
+    print(credentials.secret_key)
+    print(credentials.token)
 
      # Serializando json
     json_object = json.dumps(jsonObject, indent=4)
