@@ -28,12 +28,12 @@ En este fichero se realiza la configuración de los parametros de la base de dat
 
 ```bash
 DATABASES = {
-    "default": {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'NAME_DATABASE',
-        'USER': 'USER_DATABASE',
-        'PASSWORD': '******',
-        'HOST': 'localhost',
+        'NAME': 'AeDaliaDb2023',
+        'USER': 'postgres',
+        'PASSWORD': 'djgdoi324*gase2',
+        'HOST': 'reedev-rds-proxy.proxy-csjzzobpltfh.eu-west-1.rds.amazonaws.com',
         'PORT': '5432',
     },
 }
