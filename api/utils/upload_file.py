@@ -5,6 +5,7 @@ from botocore.exceptions import ClientError
 import os
 
 session = boto3.Session(profile_name='aesydes')
+#Descomentar si se va a desplegar en EC2
 #session = boto3.Session()
 credentials = session.get_credentials()
 

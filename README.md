@@ -74,6 +74,17 @@ Para iniciar el proyecto en EC2, tenemos que acceder al directorio del proyecto
 ```bash
 #Acceder al directorio raiz del proyecto
 cd /api_rest_calculator
-#Desplegar el proyecto en EC2
-python3 manage.py runserver
+```
+
+Desplegar de modo iterativo en la maquina de EC2
+
+```bash
+nohup python3 manage.py runserver & jobs -l
+```
+
+Detener el proceso nohup
+
+```bash
+ps -ef
+kill PID
 ```
